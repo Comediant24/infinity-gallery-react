@@ -1,9 +1,11 @@
 import styled from 'styled-components/macro';
 import GlobalStyle from '../../styles/globalStyles';
+import Header from '../Haeder/Header';
 import GlobalFonts from '../../vendor/fonts/fonts';
 function App() {
   return (
     <Wrapper>
+      <Header />
       <GlobalStyle />
       <GlobalFonts />
     </Wrapper>
@@ -14,6 +16,7 @@ export default App;
 
 const Wrapper = styled.div`
   max-width: 1320px;
-  padding: 30px 0;
+  padding: 30px 20px;
+  box-sizing: border-box;
   margin: 0 auto;
 `;
