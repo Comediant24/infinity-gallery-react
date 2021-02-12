@@ -41,6 +41,14 @@ const Input = styled.input`
     text-align: center;
     color: #000000;
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 24px;
+
+    ::placeholder {
+      font-size: 24px;
+    }
+  }
 `;
 
 const Button = styled.button`
