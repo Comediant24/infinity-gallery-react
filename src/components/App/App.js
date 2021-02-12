@@ -3,11 +3,14 @@ import GlobalStyle from '../../styles/globalStyles';
 import Header from '../Haeder/Header';
 import GlobalFonts from '../../vendor/fonts/fonts';
 import SearchForm from '../SearchForm/SearchForm';
+import SearchResult from '../SearchResult/SearchResult';
+
 function App() {
   return (
     <Wrapper>
       <Header />
       <SearchForm />
+      <SearchResult />
       <GlobalStyle />
       <GlobalFonts />
     </Wrapper>
