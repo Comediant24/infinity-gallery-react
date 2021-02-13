@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
+      name="При стартовой загрузке страницы посылается асинхронный запрос на `/photos/random` `API Unsplash`, для получения рандомных фото и заполнения компонента поисковой выдачи. Затем уже поисковые запросы обращаются к `/search/photos`. Для асинхронных запросов используется синтаксис `async/await`, обрабатываются ошибки в `try..catch`. Из полученного массива берутся данные и наполняется компонент `Card`. Для вывода сетки используется пакет `react-responsive-masonry` - гибкие настройки позволяют добиться удивительных результатов! Изначально, массив получаемый по `/search/photos` имеет длину в 10 карточек. В проекте его длина увеличивается за счет параметра `page` GET запроса к `/search/photos`. Этот параметр управляется одноименным стейтом. `imageCards` - стейт, который хранит в себе карточки полученные get запросом `/search/photos` заполняется при увилечении стейта `page`. Вызов функции увеличиваюший `page` происходит компонентом `InfiniteScroll` предоставленный `npm` пакетом `react-infinite-scroll-component`. Стили управляются `styled-components`.
+      "
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,7 +25,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Infinity Gallery</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
