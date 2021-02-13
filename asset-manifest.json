@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd190693.chunk.css",
-    "main.js": "/static/js/main.b7309f38.chunk.js",
-    "main.js.map": "/static/js/main.b7309f38.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.cebeef92.js",
-    "runtime-main.js.map": "/static/js/runtime-main.cebeef92.js.map",
-    "static/js/2.0344ddc1.chunk.js": "/static/js/2.0344ddc1.chunk.js",
-    "static/js/2.0344ddc1.chunk.js.map": "/static/js/2.0344ddc1.chunk.js.map",
-    "static/js/3.568cfd8b.chunk.js": "/static/js/3.568cfd8b.chunk.js",
-    "static/js/3.568cfd8b.chunk.js.map": "/static/js/3.568cfd8b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.fd190693.chunk.css.map": "/static/css/main.fd190693.chunk.css.map",
-    "static/js/2.0344ddc1.chunk.js.LICENSE.txt": "/static/js/2.0344ddc1.chunk.js.LICENSE.txt",
-    "static/media/SourceCodePro-Regular.277a94f3.woff2": "/static/media/SourceCodePro-Regular.277a94f3.woff2",
-    "static/media/SourceCodePro-Regular.a551956d.woff": "/static/media/SourceCodePro-Regular.a551956d.woff",
-    "static/media/like.2c20196c.svg": "/static/media/like.2c20196c.svg"
+    "main.css": "/infinity-gallery-react/static/css/main.fd190693.chunk.css",
+    "main.js": "/infinity-gallery-react/static/js/main.b7309f38.chunk.js",
+    "main.js.map": "/infinity-gallery-react/static/js/main.b7309f38.chunk.js.map",
+    "runtime-main.js": "/infinity-gallery-react/static/js/runtime-main.f6f3696c.js",
+    "runtime-main.js.map": "/infinity-gallery-react/static/js/runtime-main.f6f3696c.js.map",
+    "static/js/2.4008d041.chunk.js": "/infinity-gallery-react/static/js/2.4008d041.chunk.js",
+    "static/js/2.4008d041.chunk.js.map": "/infinity-gallery-react/static/js/2.4008d041.chunk.js.map",
+    "static/js/3.568cfd8b.chunk.js": "/infinity-gallery-react/static/js/3.568cfd8b.chunk.js",
+    "static/js/3.568cfd8b.chunk.js.map": "/infinity-gallery-react/static/js/3.568cfd8b.chunk.js.map",
+    "index.html": "/infinity-gallery-react/index.html",
+    "static/css/main.fd190693.chunk.css.map": "/infinity-gallery-react/static/css/main.fd190693.chunk.css.map",
+    "static/js/2.4008d041.chunk.js.LICENSE.txt": "/infinity-gallery-react/static/js/2.4008d041.chunk.js.LICENSE.txt",
+    "static/media/SourceCodePro-Regular.277a94f3.woff2": "/infinity-gallery-react/static/media/SourceCodePro-Regular.277a94f3.woff2",
+    "static/media/SourceCodePro-Regular.a551956d.woff": "/infinity-gallery-react/static/media/SourceCodePro-Regular.a551956d.woff",
+    "static/media/like.2c20196c.svg": "/infinity-gallery-react/static/media/like.2c20196c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cebeef92.js",
-    "static/js/2.0344ddc1.chunk.js",
+    "static/js/runtime-main.f6f3696c.js",
+    "static/js/2.4008d041.chunk.js",
     "static/css/main.fd190693.chunk.css",
     "static/js/main.b7309f38.chunk.js"
   ]
