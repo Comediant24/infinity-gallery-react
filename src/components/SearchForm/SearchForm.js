@@ -1,13 +1,34 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const SearchForm = () => {
+const SearchForm = ({
+  valueInput,
+  handleInput,
+  handleSubmitInput,
+  isErrMsg,
+}) => {
+  console.log('isErrMsg', isErrMsg);
+  const handleChange = (e) => {
+    handleInput(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleSubmitInput();
+  };
+
   return (
     <Wrapper>
-      <Form>
-        <Input placeholder="search images"></Input>
-        <Button>search</Button>
+      <Form onSubmit={handleSubmit}>
+        <Input
+          placeholder="search images"
+          value={valueInput}
+          onChange={handleChange}
+        ></Input>
+        <Button type="submit" aria-label="search photos">
+          search
+        </Button>
       </Form>
+      {isErrMsg && <ErrorMessage>you must enter a search query</ErrorMessage>}
     </Wrapper>
   );
 };
@@ -62,4 +83,12 @@ const Button = styled.button`
   box-sizing: border-box;
   cursor: pointer;
   margin-left: auto;
+
+  @media screen and (max-width: 500px) {
+    font-size: 24px;
+  }
+`;
+
+const ErrorMessage = styled.span`
+  color: red;
 `;
