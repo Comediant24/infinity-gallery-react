@@ -15,7 +15,7 @@ const SearchResult = ({ imagesCards = [], setPage }) => {
           imagesCards.length === 30 ? (
             ''
           ) : (
-            <LoaderText>loading image...</LoaderText>
+            <LoaderText>loading image...⏳</LoaderText>
           )
         }
       >

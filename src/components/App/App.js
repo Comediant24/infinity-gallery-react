@@ -12,13 +12,15 @@ function App() {
   const [page, setPage] = useState(1);
   const [imageCards, setImageCards] = useState([]);
   const [isErrMsg, setErrMsg] = useState(false);
+  const [isEmptyImages, setEmptyImages] = useState(false);
+  console.log('isEmptyImages', isEmptyImages);
 
   useEffect(() => {
     getRandomPhoto();
   }, []);
 
   useEffect(() => {
-    getQueryPhoto(valueSearch, page);
+    if (page > 1) getQueryPhoto(valueSearch, page);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
@@ -48,6 +50,11 @@ function App() {
   const getQueryPhoto = async () => {
     try {
       let images = await getPhotos(valueSearch, page);
+      if (images.length === 0) {
+        setEmptyImages(true);
+        return;
+      }
+      setEmptyImages(false);
       if (page === 1) {
         setImageCards(images);
         return;
@@ -71,7 +78,11 @@ function App() {
         handleSubmitInput={handleSubmitSearch}
         isErrMsg={isErrMsg}
       />
-      <SearchResult imagesCards={imageCards} setPage={handlePage} />
+      {isEmptyImages ? (
+        <EmptyMessage>nothing found 😥</EmptyMessage>
+      ) : (
+        <SearchResult imagesCards={imageCards} setPage={handlePage} />
+      )}
       <GlobalStyle />
       <GlobalFonts />
     </Wrapper>
@@ -88,4 +99,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 25px;
+`;
+
+const EmptyMessage = styled.p`
+  font-size: 30px;
+  text-align: center;
 `;
