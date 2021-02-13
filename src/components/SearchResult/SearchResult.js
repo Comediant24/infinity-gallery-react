@@ -11,7 +11,13 @@ const SearchResult = ({ imagesCards = [], setPage }) => {
         dataLength={imagesCards.length}
         next={() => setPage()}
         hasMore={true}
-        loader={imagesCards.length === 30 ? '' : <h4>Loading...</h4>}
+        loader={
+          imagesCards.length === 30 ? (
+            ''
+          ) : (
+            <LoaderText>loading image...</LoaderText>
+          )
+        }
       >
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 350: 1, 750: 2, 1000: 3 }}
@@ -38,3 +44,8 @@ const SearchResult = ({ imagesCards = [], setPage }) => {
 export default SearchResult;
 
 const Wrapper = styled.section``;
+
+const LoaderText = styled.p`
+  font-size: 30px;
+  text-align: center;
+`;

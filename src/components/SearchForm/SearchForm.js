@@ -7,7 +7,6 @@ const SearchForm = ({
   handleSubmitInput,
   isErrMsg,
 }) => {
-  console.log('isErrMsg', isErrMsg);
   const handleChange = (e) => {
     handleInput(e.target.value);
   };
@@ -64,10 +63,10 @@ const Input = styled.input`
   }
 
   @media screen and (max-width: 500px) {
-    font-size: 24px;
+    font-size: 20px;
 
     ::placeholder {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 `;
@@ -85,7 +84,7 @@ const Button = styled.button`
   margin-left: auto;
 
   @media screen and (max-width: 500px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 
