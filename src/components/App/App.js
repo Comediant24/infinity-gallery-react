@@ -13,14 +13,14 @@ function App() {
   const [imageCards, setImageCards] = useState([]);
   const [isErrMsg, setErrMsg] = useState(false);
   const [isEmptyImages, setEmptyImages] = useState(false);
-  console.log('isEmptyImages', isEmptyImages);
 
   useEffect(() => {
     getRandomPhoto();
   }, []);
 
   useEffect(() => {
-    if (page > 1) getQueryPhoto(valueSearch, page);
+    if (!valueSearch) return;
+    if (page > 1) getMoreQueryPhoto(valueSearch, page);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
@@ -30,9 +30,9 @@ function App() {
 
   const handleSubmitSearch = () => {
     if (valueSearch) {
-      setImageCards(() => []);
       getQueryPhoto();
       setErrMsg(false);
+      setPage(1);
     } else {
       setErrMsg(true);
     }
@@ -47,25 +47,31 @@ function App() {
     }
   };
 
-  const getQueryPhoto = async () => {
+  const getMoreQueryPhoto = async () => {
     try {
       let images = await getPhotos(valueSearch, page);
-      if (images.length === 0) {
-        setEmptyImages(true);
-        return;
-      }
-      setEmptyImages(false);
-      if (page === 1) {
-        setImageCards(images);
-        return;
-      }
       setImageCards([...imageCards, ...images]);
     } catch (error) {
       console.error(error);
     }
   };
 
+  const getQueryPhoto = async () => {
+    try {
+      let images = await getPhotos(valueSearch, 1);
+      if (images.length === 0) {
+        setEmptyImages(true);
+        return;
+      }
+      setEmptyImages(false);
+      setImageCards(images);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const handlePage = () => {
+    if (!valueSearch) return;
     setPage(page + 1);
   };
 
